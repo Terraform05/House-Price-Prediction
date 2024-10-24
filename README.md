@@ -23,8 +23,8 @@ The dataset was compiled by Dean De Cock and serves as an educational tool for d
 
 | Notebook               | Description                                                                      |
 | ---------------------- | -------------------------------------------------------------------------------- |
-| `main.ipynb`           | Main notebook. Data exploration, analysis, featurizer & model training / testing |
-| `testing_models.ipynb` | Testing saved models from `main.ipynb` on new, never seen molecules              |
+| `main.ipynb`           | Main notebook. Data exploration, analysis, features & model training             |
+| `testing_models.ipynb` | Testing saved models from `main.ipynb` on dataset                                |
 
 
 ## Models (in /models) 
