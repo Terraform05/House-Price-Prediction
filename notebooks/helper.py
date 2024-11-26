@@ -49,6 +49,18 @@ def ajr_plot_correlations(df: pd.DataFrame, y_comp_name: str, fig_height=20, sav
         print(f'Figure saved to {save_to}')
     plt.show()
     
+def ajr_correlation_heatmap(corr_df: pd.DataFrame, fig_height=10) -> None:
+    column_names = list(corr_df.columns.values)
+    plt.figure(figsize=(fig_height, fig_height))
+    plt.matshow(corr_df, cmap='coolwarm', fignum=1)
+    plt.xticks(np.arange(len(column_names)), column_names, rotation=90)
+    plt.yticks(np.arange(len(column_names)), column_names)
+    plt.tight_layout()
+    for i in range(len(corr_df.columns)):
+        for j in range(len(corr_df.columns)):
+            plt.text(j, i, f'{round(corr_df.iloc[i, j], 2)}', ha='center', va='center', color='black')
+    plt.show()
+    
     
 def ajr_plot_histograms(df: pd.DataFrame, save_to = None) -> None:
     a = int(np.ceil(np.sqrt(df.shape[1])))
